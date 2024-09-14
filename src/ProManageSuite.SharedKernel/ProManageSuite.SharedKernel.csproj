@@ -4,6 +4,7 @@
     <AssemblyName>ProManageSuite.SharedKernel</AssemblyName>
     <PackageId>ProManageSuite.SharedKernel</PackageId>
     <Title>ProManageSuite.SharedKernel</Title>
+    <TargetFramework>net8.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Steve Smith (@ardalis)</Authors>
     <Company>Ardalis.com</Company>
@@ -13,7 +14,7 @@
     <RepositoryUrl>https://github.com/ardalis/ProManageSuite.SharedKernel</RepositoryUrl>
     <PackageTags>DDD;Shared Kernel;SharedKernel;Domain-Driven Design;Repository;Specification;ValueObject;Value Object;Ardalis;Clean;Clean Architecture;Clean Architecture Template</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <Version>1.6.0</Version>
+    <Version>1.7.0</Version>
     <PackageReleaseNotes>
       * Updated to latest NuGet Package Versions
     </PackageReleaseNotes>
