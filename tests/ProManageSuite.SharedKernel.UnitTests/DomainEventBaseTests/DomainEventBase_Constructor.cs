@@ -1,7 +1,7 @@
-﻿using Xunit;
-using FluentAssertions;
+﻿using FluentAssertions;
+using Xunit;
 
-namespace Ardalis.SharedKernel.UnitTests.DomainEventBaseTests;
+namespace ProManageSuite.SharedKernel.UnitTests.DomainEventBaseTests;
 
 public class DomainEventBase_Constructor
 {

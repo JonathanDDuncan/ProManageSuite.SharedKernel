@@ -1,18 +1,20 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace Ardalis.SharedKernel.UnitTests.ValueObjectTests;
-public class ValueObject_HashEquality
+namespace ProManageSuite.SharedKernel.UnitTests.ValueObjectTests;
+
+public class ValueObject_ValueEquality
 {
+
   [Fact]
-  public void WithSameValuesHaveSameHashCode()
+  public void WithSameValuesAreEqual()
   {
     // Arrange
     var valueObject1 = new TestValueObject(1);
     var valueObject2 = new TestValueObject(1);
 
     // Act & Assert
-    valueObject1.GetHashCode().Should().Be(valueObject2.GetHashCode());
+    valueObject1.Should().Be(valueObject2);
   }
 
   [Fact]
@@ -23,6 +25,6 @@ public class ValueObject_HashEquality
     var valueObject2 = new TestValueObject(2);
 
     // Act & Assert
-    valueObject1.Should().NotBe(valueObject2);
+    valueObject1.Should().NotBe(valueObject2); 
   }
 }

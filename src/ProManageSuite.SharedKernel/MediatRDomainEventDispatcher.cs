@@ -1,7 +1,7 @@
 ﻿using System;
 using MediatR;
 
-namespace Ardalis.SharedKernel;
+namespace ProManageSuite.SharedKernel;
 
 public class MediatRDomainEventDispatcher : IDomainEventDispatcher
 {

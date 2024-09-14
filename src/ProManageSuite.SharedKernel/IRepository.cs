@@ -1,6 +1,6 @@
 ﻿using Ardalis.Specification;
 
-namespace Ardalis.SharedKernel;
+namespace ProManageSuite.SharedKernel;
 
 /// <summary>
 /// An abstraction for persistence, based on Ardalis.Specification

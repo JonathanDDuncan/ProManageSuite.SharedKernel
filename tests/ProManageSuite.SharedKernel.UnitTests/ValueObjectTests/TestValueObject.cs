@@ -1,4 +1,4 @@
-﻿namespace Ardalis.SharedKernel.UnitTests.ValueObjectTests;
+﻿namespace ProManageSuite.SharedKernel.UnitTests.ValueObjectTests;
 
 public class TestValueObject : ValueObject
   {

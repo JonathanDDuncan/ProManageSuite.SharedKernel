@@ -3,12 +3,12 @@ using MediatR;
 using Moq;
 using Xunit;
 
-namespace Ardalis.SharedKernel.UnitTests.MediatRDomainEventDispatcherTests;
+namespace ProManageSuite.SharedKernel.UnitTests.MediatRDomainEventDispatcherTests;
 
-public class DispatchAndClearEventsWithGuidId
+public class DispatchAndClearEvents
 {
   private class TestDomainEvent : DomainEventBase { }
-  private class TestEntity : EntityBase<Guid>
+  private class TestEntity : EntityBase
   {
     public void AddTestDomainEvent()
     {
@@ -18,7 +18,7 @@ public class DispatchAndClearEventsWithGuidId
   }
 
   [Fact]
-  public async void CallsPublishAndClearDomainEvents()
+  public async Task CallsPublishAndClearDomainEvents()
   {
     // Arrange
     var mediatorMock = new Mock<IMediator>();
@@ -27,7 +27,7 @@ public class DispatchAndClearEventsWithGuidId
     entity.AddTestDomainEvent();
 
     // Act
-    await domainEventDispatcher.DispatchAndClearEvents(new List<EntityBase<Guid>> { entity });
+    await domainEventDispatcher.DispatchAndClearEvents(new List<EntityBase> { entity });
 
     // Assert
     mediatorMock.Verify(m => m.Publish(It.IsAny<DomainEventBase>(), It.IsAny<CancellationToken>()), Times.Once);
